@@ -10,13 +10,7 @@
 
 @interface Entrant : NSObject {
     
-    NSString *faculty;      // Факультет или отделение;
-    NSString *group;        // Номер академической группы;
-    NSString *name;         // Полное имя;
-    NSString *email;        // Корпоративный email с @edu.hse.ru;
-    BOOL *isWarden;         // Является старостой;
-    BOOL *hasReminder;      // Установил приложение, значит, можно присылать напоминания;
-    BOOL *knockedOut;       // Вылетел за незачи
+    
 }
 
 -(NSString *)name;
