@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B22D6849163D4E9F003A828C /* Entrant.m in Sources */ = {isa = PBXBuildFile; fileRef = B22D6848163D4E9F003A828C /* Entrant.m */; };
 		B2EC5AD0163B5B820092EE0C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2EC5ACF163B5B820092EE0C /* UIKit.framework */; };
 		B2EC5AD2163B5B820092EE0C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2EC5AD1163B5B820092EE0C /* Foundation.framework */; };
 		B2EC5AD4163B5B820092EE0C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2EC5AD3163B5B820092EE0C /* CoreGraphics.framework */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B22D6847163D4E9F003A828C /* Entrant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entrant.h; sourceTree = "<group>"; };
+		B22D6848163D4E9F003A828C /* Entrant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entrant.m; sourceTree = "<group>"; };
 		B2EC5ACB163B5B820092EE0C /* HSE+.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HSE+.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2EC5ACF163B5B820092EE0C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B2EC5AD1163B5B820092EE0C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -90,6 +93,8 @@
 		B2EC5AC0163B5B820092EE0C = {
 			isa = PBXGroup;
 			children = (
+				B22D6847163D4E9F003A828C /* Entrant.h */,
+				B22D6848163D4E9F003A828C /* Entrant.m */,
 				B2EC5B10163B5C0A0092EE0C /* Student.h */,
 				B2EC5B11163B5C0A0092EE0C /* Student.m */,
 				B2EC5AD5163B5B820092EE0C /* HSE+ */,
@@ -279,6 +284,7 @@
 				B2EC5AE0163B5B820092EE0C /* AppDelegate.m in Sources */,
 				B2EC5AEC163B5B820092EE0C /* ViewController.m in Sources */,
 				B2EC5B12163B5C0A0092EE0C /* Student.m in Sources */,
+				B22D6849163D4E9F003A828C /* Entrant.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
