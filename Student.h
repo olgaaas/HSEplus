@@ -27,6 +27,8 @@
 -(BOOL *)hasReminder;
 -(BOOL *)knockedOut;
 
+// Если (isWarden == 1), тогда надо реализовать для него функцию отправки сообщений всем студентам группы.
+ 
 -(void)setName:(NSString *)_name;
 -(void)setEmail:(NSString *)_email;
 -(void)setGroup:(NSString *)_group;
