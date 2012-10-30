@@ -9,13 +9,13 @@
 #import <Foundation/Foundation.h>
 
 @interface Reminder : NSObject{
-    NSString *DateRemind;   // дата ремайндера ;
-    NSString *TimeRemind;   // время события ;
-    NSString *DateEvent;    // дата события ;
-    NSString *TimeEvent;    // время события ;
-    NSString *Contain;      // содержание ремайндера ;
-    NSString *newsWms;      // переменная для новость/сообщение от старосты ;
-    BOOL *SendWarden;       // если сообщение от старосты, отправлять на почту ;
+    NSString *DateRemind; дата ремайндера;
+
+    NSString *DateEvent;        //время события;
+    NSString *TimeEvent;        //дата события;
+    NSString *Contain;          //содержание ремайндера;
+    NSString *newsWms;          // переменная для новость/сообщение от старосты;
+    BOOL *SendWarden;           //если сообщение от старосты, отправлять на почту.
 }
 
 -(NSString *)DateRemind;
