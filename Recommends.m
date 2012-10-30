@@ -9,24 +9,24 @@
 #import "Recommends.h"
 
 
-@implementation Recommends : NSObject {
-    NSString *faculty;
-    NSString *kurs;
-    NSString *fio;
-    NSString *contact;
-    NSString *body;
-    BOOL *noflood;
-}
+@implementation Recommends
 
--(NSString *)faculty;
--(NSString *)kurs;
--(NSString *)fio;
--(NSString *)contact;
--(NSString *)body;
--(BOOL *)noflood;
 
--(void)setFaculty:(NSString *)_faculty;
--(void)setKurs:(NSString *)_fio;
--(void)setFaculty
+-(NSString *)faculty { return faculty; }
+-(NSString *)kurs { return kurs; }
+-(NSString *)fio { return fio; }
+-(NSString *)contact { return contact; }
+-(NSString *)body { return body; }
+-(BOOL *)noflood { return noflood; }
+
+
+-(void)setFaculty:(NSString *)_faculty { faculty = _faculty; }
+-(void)setKurs:(NSString *)_kurs { kurs = _kurs; }
+-(void)setFio:(NSString *)_fio { fio = _fio; }
+-(void)setContact:(NSString *)_contact { contact = _contact; }
+-(void)setBody:(NSString *)_body { body = _body; }
+-(void)setFlood:(BOOL *)_noflood { noflood = _noflood; }
+
+
 
 @end
