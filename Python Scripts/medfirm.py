@@ -3,9 +3,9 @@
 
 '''
 Copyright © Alexey Khan 2012  All rights reserved
-27.08.12
 www.medfirm.ru site parsing script, written to collect 
 information about hospitals and pharmacy in Russia.
+27.08.12
 '''
 
 #Library
