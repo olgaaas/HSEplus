@@ -1,8 +1,5 @@
 #! /usr/bin/python
 # -*- coding: cp1251 -*-
-import datetime
-import codecs
-import csv
 
 '''
 Copyright © Alexey Khan 2012  All rights reserved
@@ -12,19 +9,23 @@ information about hospitals and pharmacy in Russia.
 '''
 
 #Library
+from parsinglib import *
 import httplib, sys, re
 import locale, urllib, urllib2
 import random
-from parsinglib import *
+import datetime
+import codecs
+import csv
+
           
 #WORK
 
 #file = open("medfim.csv", "w")           
 body = get_body('http://medfirm.ru/')
-body = find_where(body,'<!--������� ������-->','</table>')
+body = find_where(body,'<!--Крупные города-->','</table>')
 
 # only big cities (before regions)
-cities = find_where(body,'<p><strong>������� ������ ������</strong></p>','<!--�������-->')
+cities = find_where(body,'<p><strong>Крупные города России</strong></p>','<!--Регионы-->')
 count_cities = spy_massiv(cities,"<a class")                           # searching in array
 for i in xrange(count_cities):
     url_cities = find_where(cities,'href=\"','\">')                    # searching links  
@@ -36,7 +37,7 @@ for i in xrange(count_cities):
         
     # find the number of pages
     body2 = get_body(url_cities+'-1.html')                                                  
-    n_pages = find_where(body2, '��������:','</a> </div>')
+    n_pages = find_where(body2, 'Страницы:','</a> </div>')
     n_pages = clear(n_pages, '')
     n_pages = find_where(n_pages, '...','') 
     n_pages = re.sub(r"&[^;]*;","",n_pages)
@@ -47,10 +48,10 @@ for i in xrange(count_cities):
         body3 = get_body(url_cities+'-'+str(j)+'.html') 
         med_links = find_where(body3, '<table class="dealer" border="0" summary="">', '<td colspan="2" style="text-transform: uppercase;">')
         count_med = spy_massiv(med_links,"href")                  # number of links to med. centers
-        print '��������', str(j)
-        print '����� ������ �� ��������:', str(count_med)
+        print 'Страница', str(j)
+        print 'Число ссылок на странице:', str(count_med)
         for q in xrange(count_med): 
-            print '������ �� ����� �� ����:', str(q)
+            print 'Ссылка по счету от нуля:', str(q)
             if (j == 167) and (q == 6):                                                # on page 168 line 7 there is a broken link
                 med_links = find_where(med_links, 'href=\"', '')                       # new link
                 continue             
@@ -60,15 +61,15 @@ for i in xrange(count_cities):
             name = find_where(body_main, '<title>', '</title>')
             name = re.sub(r'<title>','',name)  
             name = name.strip()                                                         # name of organization
-            address = find_where(body_main, '<b>�����:</b>', '<br><b>�������:')  
-            address = re.sub(r'<b>�����:</b>', '', address)  
+            address = find_where(body_main, '<b>Адрес:</b>', '<br><b>Телефон:')  
+            address = re.sub(r'<b>Адрес:</b>', '', address)  
             address = address.strip()                                                   # address of organization
-            phone = find_where(body_main, '<br><b>�������:', '<b>��� ������������:') 
+            phone = find_where(body_main, '<br><b>Телефон:', '<b>Вид деятельности:') 
             phone = clear(phone, '')
-            phone = re.sub(r'�������:', '', phone)
+            phone = re.sub(r'Телефон:', '', phone)
             phone = phone.strip()                                                       # phone of organization
-            worktype = find_where(body_main, '<b>��� ������������:', '<noindex>') 
-            worktype = re.sub(r'<b>��� ������������:','',worktype)
+            worktype = find_where(body_main, '<b>Вид деятельности:', '<noindex>') 
+            worktype = re.sub(r'<b>Вид деятельности:','',worktype)
             worktype = clear(worktype,'')
             worktype = worktype.strip()
             med_links = find_where(med_links, 'href=\"', '')                            # new link
@@ -80,7 +81,7 @@ for i in xrange(count_cities):
             print worktype
 
 # only regions
-regions = find_where(body,'<!--�������-->','')
+regions = find_where(body,'<!--Регионы-->','')
 count_regions = spy_massiv(regions,"<a class")                 # searching in array
 for r in xrange(count_regions):  
     if r == 5 or r == 62 or r == 80:                                      # regions n. 6, n. 62 and n. 81 have no med. centeres 
@@ -97,7 +98,7 @@ for r in xrange(count_regions):
         link = re.sub(r'href=\"', 'http://medfirm.ru', link)
         body_reg = find_where(body_reg, 'border=\"0\">', '')
         npages_body_m = get_body(link)
-        npages_body_m = find_where(npages_body_m, '��������', '</div>')
+        npages_body_m = find_where(npages_body_m, 'Страницы', '</div>')
         npages_body_m = clear(npages_body_m, '')        
         if '...' in npages_body_m:
             npages_body_m = find_where(npages_body_m, '...','')
@@ -105,9 +106,9 @@ for r in xrange(count_regions):
             npages_body_m = re.sub(r"\.\.\.","",npages_body_m)
         else:
             npages_body_m = re.sub(r"&[^;]*;","",npages_body_m)
-            npages_body_m = re.sub(r'��������:','',npages_body_m)       
+            npages_body_m = re.sub(r'Страницы:','',npages_body_m)       
     
-        hospitals = find_where(get_body(link), '<!-- ����� ������ ����������-->', '<tr><td colspan="2" style="text-transform: uppercase;">')   
+        hospitals = find_where(get_body(link), '<!-- конец спешал размещения-->', '<tr><td colspan="2" style="text-transform: uppercase;">')   
         count_hospitals = spy_massiv(hospitals, '<a class')                 # how many hospitals on a page
         for l in xrange(count_hospitals): 
             link_hosp = find_where(hospitals,'href=\"','\">')               # links to hospitals
@@ -116,15 +117,15 @@ for r in xrange(count_regions):
             name_h = find_where(body_hosp, '<h1>', '</h1>')
             name_h = re.sub(r'<h1>','',name_h)  
             name_h = name_h.strip()                                                 # name of organization
-            address_h = find_where(body_hosp, '<b>�����:</b>', '<br><b>�������:')  
-            address_h = re.sub(r'<b>�����:</b>', '', address_h)  
+            address_h = find_where(body_hosp, '<b>Адрес:</b>', '<br><b>Телефон:')  
+            address_h = re.sub(r'<b>Адрес:</b>', '', address_h)  
             address_h = address_h.strip()                                           # address of organization
-            phone_h = find_where(body_hosp, '<br><b>�������:', '<b>��� ������������:') 
+            phone_h = find_where(body_hosp, '<br><b>Телефон:', '<b>Вид деятельности:') 
             phone_h = clear(phone_h, '')
-            phone_h = re.sub(r'�������:', '', phone_h)
+            phone_h = re.sub(r'Телефон:', '', phone_h)
             phone_h = phone_h.strip()                                               # phone of organization
-            worktype_h = find_where(body_hosp, '<b>��� ������������:', '') 
-            worktype_h = re.sub(r'<b>��� ������������:','',worktype_h)
+            worktype_h = find_where(body_hosp, '<b>Вид деятельности:', '') 
+            worktype_h = re.sub(r'<b>Вид деятельности:','',worktype_h)
             worktype_h = find_where(worktype_h, ' ', '<noindex>')
             worktype_h = worktype_h.strip()
             hospitals = find_where(hospitals,'href=\"','')                          # new link
@@ -136,7 +137,7 @@ for r in xrange(count_regions):
             print phone_h
             print worktype_h
               
-#file.close()     
+#file.close()    
         
         
         
