@@ -9,27 +9,24 @@ Copyright © Alexey Khan 2012  All rights reserved
 import httplib, sys, re
 import locale, urllib, urllib2, random
 
-#Function Get body
+#Function that gets html-code of the page ;
 def get_body(url):
     html = urllib.urlopen(url)
     html = html.read()
     return html
 
-#find where
+#Function that finds code between 'b_search' and 'e_search' strings in html variable ;
 def find_where(html,b_search,e_search):
-   
     data = html
     if data.find(b_search) != -1:
         data = data[data.find(b_search,1):]
-    
         if e_search != "":
             data = data[:data.find(e_search)]
 
     return data
 
-#hook
+#Function that finds an element;
 def hook (html,find_element):
-    
     data = html
     
     if data.find(find_element) == -1:
@@ -39,23 +36,20 @@ def hook (html,find_element):
         data = "find"
         return data
 
-#return count in massiv    
+#Function that counts hom many elements 'element' are there in the 'p_body' text ;  
 def spy_massiv (p_body,element):
      
     count = 0
        
     while hook(p_body,element) == "find":
-
         b_search = element
         e_search = ""
-
         p_body = find_where(p_body,b_search,e_search)
-        
         count = count + 1
         
     return count-1
         
-#get body use proxies
+#Function that clears the perem variable from html-tags and different regular expressions ;
 def clear(perem,change = None):
     if change == None:
         perem = re.sub(r"<[^>]*>","",perem)
@@ -76,7 +70,7 @@ def clear(perem,change = None):
     
     return perem
 
-#get field
+#Function that gets fields ;
 def get_field(html,el_1,el_2):
     
     data = html
@@ -90,19 +84,15 @@ def get_field(html,el_1,el_2):
         if data.find(el_2) != -1:
             index = data.index(el_2,0,20000)
             field = data [0:index]
-                
             field = re.sub(r"\n", "", field)
             field = re.sub(r"\r", "", field)
             field = re.sub(r"\t", "", field)
-    
             return field
-        
         else:   
-                  
             field = "no result"
             return field
 
-
+#Function get_body that uses proxy ;
 def get_b_proxy(url=None):
     
     status = "bad"
@@ -119,31 +109,22 @@ def get_b_proxy(url=None):
     
     while status is "bad":
         
-        buf = random.sample(mas,1)
-        
-        proxy = buf[0]
-        
+        buf = random.sample(mas,1)   
+        proxy = buf[0]    
         print "Use proxy, current proxy: "+proxy     
-
         proxy_handler = urllib2.ProxyHandler( {"http" : proxy} )
-        
         opener = urllib2.build_opener(proxy_handler)
-        
         urllib2.install_opener(opener)
 
         if url is None:
-            
             url = "http://www.2ip.ru"
-    
             page_request = urllib2.Request(url, headers = headers)
-    
             try:
                 data = urllib2.urlopen(page_request).read()
             except (IOError), msg:
                 print msg
                 status = "bad"
-            else:
-                                
+            else:            
                 el_1 = "<big>"
                 el_2 = "</big>"
                 
@@ -166,34 +147,26 @@ def get_b_proxy(url=None):
                 print b
                 print country
 
-                status = "ok"
-            
+                status = "ok"   
         if url is not None:
-                
             page_request = urllib2.Request(url, headers = headers)
-                
             try:
                 data = urllib2.urlopen(page_request).read()               
             except(IOError), msg: 
-                
                 errors = {"404":"NOT such page",
                           "400":"Syntaxis",
                           "500":"Socet",
                           "504":"Server error or in url"}
                 #print msg
-                
                 cur_error = get_field(str(msg),"Error ",":")
                 cur_error = re.sub(r"Error ","",cur_error)
-                
                 print errors[cur_error]
-                
                 status = "ok"
-                
             else:
-                
                 status = "ok"
                 return data
-            
+
+#Function that finds url-links in html variable ;
 def get_url(html,b_url,e_url,link):
     url_mas = []
     count_url = spy_massiv(html,b_url)
