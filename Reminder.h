@@ -9,8 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface Reminder : NSObject{
-    NSString *DateRemind; дата ремайндера;
-
+    NSString *DateRemind;       // дата ремайндера;
     NSString *DateEvent;        //время события;
     NSString *TimeEvent;        //дата события;
     NSString *Contain;          //содержание ремайндера;
