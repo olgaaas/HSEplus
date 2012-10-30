@@ -10,8 +10,6 @@
 
 @implementation Reminder
 
-
-
 -(NSString *)DateRemind {return DateRemind;}
 -(NSString *)TimeRemind{return TimeRemind;}
 -(NSString *)DateEvent{return DateEvent;}
