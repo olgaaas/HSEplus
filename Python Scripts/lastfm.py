@@ -3,10 +3,10 @@
 
 '''
 Copyright © Alexey Khan 2012  All rights reserved
-09.08.12
 www.last.fm site parsing script, written to collect 
 information about music in the OnjectsDB for
 www.interestoria.com project.
+09.08.12
 '''
 
 #Library::
