@@ -6,15 +6,15 @@
 //
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 @interface Recommends : NSObject {
-    NSString *faculty;      // факультет
-    NSString *kurs;         // курс
-    NSString *fio;          // Фамилия, имя, отчество
-    NSString *contact;      // контакт, возможно опционально
-    NSString *body;         // тело рекомендации
-    BOOL *noflood;          // проверка на флуд модератором
+    NSString *faculty;          //факультет
+    NSString *kurs;             //курс
+    NSString *fio;              //Фамилия, имя, отчество
+    NSString *contact;          //контакт, возможно опционально
+    NSString *body;             //тело рекомендации
+    BOOL *noflood;              //проверка на флуд модератором
 }
 
 -(NSString *)faculty;
