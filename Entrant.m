@@ -12,7 +12,7 @@
 
 // Описание методов для получения значений полей объекта класса Entrant;
 -(NSMutableArray *)subscribedTo { return subscribedTo; }
--(BOOL *)hasSubscribtions { return hasSubscribtions; }
+-(BOOL *)hasSubscriptions { return hasSubscribtions; }
 -(BOOL *)newUnpublishedNews { return newUnpublishedNews; }
 -(BOOL *)reminderNeeded { return reminderNeeded; }
 
