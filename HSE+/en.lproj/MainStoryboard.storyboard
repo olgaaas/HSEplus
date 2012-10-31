@@ -7,7 +7,6 @@
         <!--View Controller-->
         <scene sceneID="ckl-3q-3zZ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8lK-Cy-SBa" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Wx0-zU-ieQ" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RYa-EN-PWa">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
@@ -26,39 +25,62 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" email@edu.hse.ru" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Avd-K1-aRo">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="242" id="OlB-7s-pfj"/>
+                                    <constraint firstAttribute="height" constant="30" id="zyJ-EP-mxE"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hqN-x6-iSq">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="GC5-xY-m90"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bwk-MF-9Qc">
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <items>
-                                    <tabBarItem title="Абитуриент. Вход" id="cU2-rz-gQv"/>
-                                    <tabBarItem title="Студент. Регистрация" id="P6m-Z9-c8i"/>
-                                </items>
-                            </tabBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xXB-Rn-DkT">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="4wz-CR-K8m"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                                <state key="normal" title="Я абитур">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Зарегистрироваться" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udF-76-epp">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="5Ju-4H-uVN"/>
+                                    <constraint firstAttribute="width" constant="138" id="9Vd-Th-atm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                                <color key="textColor" red="0.11298837973312022" green="0.0035874409517789065" blue="0.35629538381742742" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.054901964962482452" green="0.62745100259780884" blue="0.89019614458084106" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
-                            <constraint firstItem="Bwk-MF-9Qc" firstAttribute="centerX" secondItem="hqN-x6-iSq" secondAttribute="centerX" type="default" id="4UQ-Ew-4OM"/>
-                            <constraint firstItem="Bwk-MF-9Qc" firstAttribute="trailing" secondItem="RYa-EN-PWa" secondAttribute="trailing" type="default" id="A6K-Bl-2hW"/>
+                            <constraint firstItem="udF-76-epp" firstAttribute="top" secondItem="hqN-x6-iSq" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="C7O-SJ-fj9"/>
                             <constraint firstItem="Avd-K1-aRo" firstAttribute="centerX" secondItem="39Q-z4-GUH" secondAttribute="centerX" type="default" id="CM2-xH-jc1"/>
+                            <constraint firstItem="udF-76-epp" firstAttribute="centerX" secondItem="RYa-EN-PWa" secondAttribute="centerX" type="default" id="I4Y-JB-mRH"/>
                             <constraint firstItem="hqN-x6-iSq" firstAttribute="top" secondItem="Avd-K1-aRo" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="IZV-di-FWl"/>
-                            <constraint firstItem="Bwk-MF-9Qc" firstAttribute="leading" secondItem="RYa-EN-PWa" secondAttribute="leading" type="default" id="Oe0-X5-Lyw"/>
+                            <constraint firstItem="udF-76-epp" firstAttribute="centerX" secondItem="hqN-x6-iSq" secondAttribute="centerX" type="default" id="VK7-Nn-mzt"/>
                             <constraint firstItem="hqN-x6-iSq" firstAttribute="trailing" secondItem="Avd-K1-aRo" secondAttribute="trailing" type="default" id="Znd-bF-hH0"/>
-                            <constraint firstItem="Bwk-MF-9Qc" firstAttribute="bottom" secondItem="RYa-EN-PWa" secondAttribute="bottom" type="default" id="b81-nh-zUa"/>
+                            <constraint firstItem="hqN-x6-iSq" firstAttribute="baseline" secondItem="xXB-Rn-DkT" secondAttribute="baseline" type="default" id="aWb-jE-oyK"/>
                             <constraint firstItem="Avd-K1-aRo" firstAttribute="top" secondItem="RYa-EN-PWa" secondAttribute="top" constant="194" id="eqd-Wm-ZWK"/>
+                            <constraint firstAttribute="bottom" secondItem="xXB-Rn-DkT" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="i8h-jl-Txj"/>
                             <constraint firstItem="39Q-z4-GUH" firstAttribute="top" secondItem="RYa-EN-PWa" secondAttribute="top" constant="79" id="lCv-fa-0NJ"/>
                             <constraint firstItem="hqN-x6-iSq" firstAttribute="leading" secondItem="Avd-K1-aRo" secondAttribute="leading" type="default" id="nIV-Tx-sL6"/>
+                            <constraint firstItem="xXB-Rn-DkT" firstAttribute="leading" secondItem="hqN-x6-iSq" secondAttribute="leading" type="default" id="sUW-fl-hfz"/>
+                            <constraint firstItem="hqN-x6-iSq" firstAttribute="trailing" secondItem="xXB-Rn-DkT" secondAttribute="trailing" type="default" id="w2I-AL-Lne"/>
                         </constraints>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8lK-Cy-SBa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-91" y="75"/>
+            <point key="canvasLocation" x="61" y="14"/>
         </scene>
     </scenes>
     <classes>
