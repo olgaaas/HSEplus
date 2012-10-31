@@ -12,15 +12,10 @@ information about hospitals and pharmacy in Russia.
 from parsinglib import *
 import httplib, sys, re
 import locale, urllib, urllib2
-import random
-import datetime
-import codecs
-import csv
-
+import random, datetime, codecs
           
 #WORK
-
-#file = open("medfim.csv", "w")           
+           
 body = get_body('http://medfirm.ru/')
 body = find_where(body,'<!--Крупные города-->','</table>')
 
@@ -73,8 +68,8 @@ for i in xrange(count_cities):
             worktype = clear(worktype,'')
             worktype = worktype.strip()
             med_links = find_where(med_links, 'href=\"', '')                            # new link
-            #s = name+';'+address+';'+phone+';'+worktype+'\n'
-            #file.write(s)
+            
+            # data output
             print name
             print address
             print phone
@@ -129,15 +124,14 @@ for r in xrange(count_regions):
             worktype_h = find_where(worktype_h, ' ', '<noindex>')
             worktype_h = worktype_h.strip()
             hospitals = find_where(hospitals,'href=\"','')                          # new link
-            s = name_h+';'+address_h+';'+phone_h+';'+worktype_h+'\n'
-            #file.write(s)
-            #print s
+
+            # data output
             print name_h
             print address_h
             print phone_h
             print worktype_h
-              
-#file.close()    
+
+print "all data is collected"
         
         
         
