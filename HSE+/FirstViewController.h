@@ -1,5 +1,5 @@
 //
-//  HSEplusViewController.h
+//  FirstViewController.h
 //  HSE+
 //
 //  Created by  Alexey Khan on 01.11.12.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HSEplusViewController : UIViewController
+@interface FirstViewController : UIViewController
 
 
 @end
