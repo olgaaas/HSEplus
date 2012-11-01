@@ -20,7 +20,11 @@
 - (void)viewDidLoad { [super viewDidLoad]; }
 - (void)didReceiveMemoryWarning { [super didReceiveMemoryWarning]; }
 
+// Опустить клавиатуру по нажатию Return
 -(IBAction)textFieldDoneEditing:(id)sender { [sender resignFirstResponder]; }
--(IBAction)backgroundTap:(id)sender { [sender resignFirstResponder]; }
 
+// Опустить клавиатуру по нажатию на background
+/* НЕ ПАШЕТ, ЗАРАЗА
+-(IBAction)backgroundTap:(id)sender { [sender resignFirstResponder]; }
+*/
 @end
