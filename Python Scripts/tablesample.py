@@ -8,9 +8,10 @@ import codecs
 import sys, csv
 from os.path import join, dirname
 
-pfile = open('Example.csv', 'a')
-head = 'Genre;'+'Similar;'+'Link\n'
-pfile.write(head)
+# Open the file
+pfile = open('Example.csv', 'w')        # open('Example.csv', 'a')
+head = 'Genre;'+'Similar;'+'Link\n'     # set a header for Excel-file
+pfile.write(head)                       # write the header into the file
 
 #Parsing::
 print "Данный скрипт вытаскивает жанры, количество страниц, имя исполнителя, облако тегов и ссылку на страницу исполнителя с сайта last.fm \n"
