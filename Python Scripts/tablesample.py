@@ -1,6 +1,11 @@
 #! /usr/bin/python
 # -*- coding: utf8 -*-
 
+'''
+Copyright © Alexey Khan 2012  All rights reserved
+02.11.12; How to collect information into a file; 
+'''
+
 #Library::
 from parsinglib import *
 import datetime
