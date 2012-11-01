@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B22D6849163D4E9F003A828C /* Entrant.m in Sources */ = {isa = PBXBuildFile; fileRef = B22D6848163D4E9F003A828C /* Entrant.m */; };
+		B289935E1642DA6E00AC4549 /* HSEplusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B289935D1642DA6E00AC4549 /* HSEplusViewController.m */; };
 		B2A914501640330C001A99C5 /* Recommends.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A9144D1640330C001A99C5 /* Recommends.m */; };
 		B2A914511640330C001A99C5 /* Reminder.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A9144F1640330C001A99C5 /* Reminder.m */; };
 		B2C102D41640312300DEF9A2 /* Faculty.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C102D31640312300DEF9A2 /* Faculty.m */; };
@@ -22,7 +23,6 @@
 		B2EC5AE4163B5B820092EE0C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2EC5AE3163B5B820092EE0C /* Default@2x.png */; };
 		B2EC5AE6163B5B820092EE0C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2EC5AE5163B5B820092EE0C /* Default-568h@2x.png */; };
 		B2EC5AE9163B5B820092EE0C /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2EC5AE7163B5B820092EE0C /* MainStoryboard.storyboard */; };
-		B2EC5AEC163B5B820092EE0C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2EC5AEB163B5B820092EE0C /* ViewController.m */; };
 		B2EC5AF4163B5B820092EE0C /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2EC5AF3163B5B820092EE0C /* SenTestingKit.framework */; };
 		B2EC5AF5163B5B820092EE0C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2EC5ACF163B5B820092EE0C /* UIKit.framework */; };
 		B2EC5AF6163B5B820092EE0C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2EC5AD1163B5B820092EE0C /* Foundation.framework */; };
@@ -44,6 +44,8 @@
 /* Begin PBXFileReference section */
 		B22D6847163D4E9F003A828C /* Entrant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entrant.h; sourceTree = "<group>"; };
 		B22D6848163D4E9F003A828C /* Entrant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entrant.m; sourceTree = "<group>"; };
+		B289935C1642DA6E00AC4549 /* HSEplusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSEplusViewController.h; sourceTree = "<group>"; };
+		B289935D1642DA6E00AC4549 /* HSEplusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSEplusViewController.m; sourceTree = "<group>"; };
 		B2A9144C1640330C001A99C5 /* Recommends.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recommends.h; sourceTree = "<group>"; };
 		B2A9144D1640330C001A99C5 /* Recommends.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recommends.m; sourceTree = "<group>"; };
 		B2A9144E1640330C001A99C5 /* Reminder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reminder.h; sourceTree = "<group>"; };
@@ -66,8 +68,6 @@
 		B2EC5AE3163B5B820092EE0C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		B2EC5AE5163B5B820092EE0C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		B2EC5AE8163B5B820092EE0C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		B2EC5AEA163B5B820092EE0C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B2EC5AEB163B5B820092EE0C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B2EC5AF2163B5B820092EE0C /* HSE+Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HSE+Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2EC5AF3163B5B820092EE0C /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		B2EC5AFB163B5B820092EE0C /* HSE+Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HSE+Tests-Info.plist"; sourceTree = "<group>"; };
@@ -150,8 +150,8 @@
 				B2EC5ADE163B5B820092EE0C /* AppDelegate.h */,
 				B2EC5ADF163B5B820092EE0C /* AppDelegate.m */,
 				B2EC5AE7163B5B820092EE0C /* MainStoryboard.storyboard */,
-				B2EC5AEA163B5B820092EE0C /* ViewController.h */,
-				B2EC5AEB163B5B820092EE0C /* ViewController.m */,
+				B289935D1642DA6E00AC4549 /* HSEplusViewController.m */,
+				B289935C1642DA6E00AC4549 /* HSEplusViewController.h */,
 				B2EC5AD6163B5B820092EE0C /* Supporting Files */,
 			);
 			path = "HSE+";
@@ -302,13 +302,13 @@
 			files = (
 				B2EC5ADC163B5B820092EE0C /* main.m in Sources */,
 				B2EC5AE0163B5B820092EE0C /* AppDelegate.m in Sources */,
-				B2EC5AEC163B5B820092EE0C /* ViewController.m in Sources */,
 				B2EC5B12163B5C0A0092EE0C /* Student.m in Sources */,
 				B22D6849163D4E9F003A828C /* Entrant.m in Sources */,
 				B2C102D41640312300DEF9A2 /* Faculty.m in Sources */,
 				B2C102D8164031C200DEF9A2 /* News.m in Sources */,
 				B2A914501640330C001A99C5 /* Recommends.m in Sources */,
 				B2A914511640330C001A99C5 /* Reminder.m in Sources */,
+				B289935E1642DA6E00AC4549 /* HSEplusViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

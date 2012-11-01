@@ -15,6 +15,12 @@
     // Override point for customization after application launch.
     return YES;
 }
+
+-(BOOL) textFieldShouldReturn:(UITextField *)textField{
+    
+    [textField resignFirstResponder];
+    return YES;
+}
 							
 - (void)applicationWillResignActive:(UIApplication *)application
 {
