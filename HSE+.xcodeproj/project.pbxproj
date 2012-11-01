@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B22D6849163D4E9F003A828C /* Entrant.m in Sources */ = {isa = PBXBuildFile; fileRef = B22D6848163D4E9F003A828C /* Entrant.m */; };
 		B289935E1642DA6E00AC4549 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B289935D1642DA6E00AC4549 /* FirstViewController.m */; };
-		B2A914501640330C001A99C5 /* Recommends.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A9144D1640330C001A99C5 /* Recommends.m */; };
-		B2A914511640330C001A99C5 /* Reminder.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A9144F1640330C001A99C5 /* Reminder.m */; };
-		B2C102D41640312300DEF9A2 /* Faculty.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C102D31640312300DEF9A2 /* Faculty.m */; };
-		B2C102D8164031C200DEF9A2 /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C102D7164031C200DEF9A2 /* News.m */; };
+		B2912C551643129D003E3AE8 /* Entrant.m in Sources */ = {isa = PBXBuildFile; fileRef = B2912C4B1643129D003E3AE8 /* Entrant.m */; };
+		B2912C561643129D003E3AE8 /* Recommends.m in Sources */ = {isa = PBXBuildFile; fileRef = B2912C4D1643129D003E3AE8 /* Recommends.m */; };
+		B2912C571643129D003E3AE8 /* Reminder.m in Sources */ = {isa = PBXBuildFile; fileRef = B2912C4F1643129D003E3AE8 /* Reminder.m */; };
+		B2912C581643129D003E3AE8 /* Faculty.m in Sources */ = {isa = PBXBuildFile; fileRef = B2912C511643129D003E3AE8 /* Faculty.m */; };
+		B2912C591643129D003E3AE8 /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = B2912C531643129D003E3AE8 /* News.m */; };
+		B2912C5A1643129D003E3AE8 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = B2912C541643129D003E3AE8 /* Student.m */; };
 		B2EC5AD0163B5B820092EE0C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2EC5ACF163B5B820092EE0C /* UIKit.framework */; };
 		B2EC5AD2163B5B820092EE0C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2EC5AD1163B5B820092EE0C /* Foundation.framework */; };
 		B2EC5AD4163B5B820092EE0C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2EC5AD3163B5B820092EE0C /* CoreGraphics.framework */; };
@@ -28,7 +29,6 @@
 		B2EC5AF6163B5B820092EE0C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2EC5AD1163B5B820092EE0C /* Foundation.framework */; };
 		B2EC5AFE163B5B820092EE0C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B2EC5AFC163B5B820092EE0C /* InfoPlist.strings */; };
 		B2EC5B01163B5B820092EE0C /* HSE_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = B2EC5B00163B5B820092EE0C /* HSE_Tests.m */; };
-		B2EC5B12163B5C0A0092EE0C /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = B2EC5B11163B5C0A0092EE0C /* Student.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,18 +42,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B22D6847163D4E9F003A828C /* Entrant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Entrant.h; path = ../Entrant.h; sourceTree = "<group>"; };
-		B22D6848163D4E9F003A828C /* Entrant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Entrant.m; path = ../Entrant.m; sourceTree = "<group>"; };
 		B289935C1642DA6E00AC4549 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		B289935D1642DA6E00AC4549 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		B2A9144C1640330C001A99C5 /* Recommends.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Recommends.h; path = ../Recommends.h; sourceTree = "<group>"; };
-		B2A9144D1640330C001A99C5 /* Recommends.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Recommends.m; path = ../Recommends.m; sourceTree = "<group>"; };
-		B2A9144E1640330C001A99C5 /* Reminder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reminder.h; path = ../Reminder.h; sourceTree = "<group>"; };
-		B2A9144F1640330C001A99C5 /* Reminder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reminder.m; path = ../Reminder.m; sourceTree = "<group>"; };
-		B2C102D21640312300DEF9A2 /* Faculty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Faculty.h; path = ../Faculty.h; sourceTree = "<group>"; };
-		B2C102D31640312300DEF9A2 /* Faculty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Faculty.m; path = ../Faculty.m; sourceTree = "<group>"; };
-		B2C102D6164031C200DEF9A2 /* News.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = News.h; path = ../News.h; sourceTree = "<group>"; };
-		B2C102D7164031C200DEF9A2 /* News.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = News.m; path = ../News.m; sourceTree = "<group>"; };
+		B2912C491643129D003E3AE8 /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		B2912C4A1643129D003E3AE8 /* Entrant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entrant.h; sourceTree = "<group>"; };
+		B2912C4B1643129D003E3AE8 /* Entrant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entrant.m; sourceTree = "<group>"; };
+		B2912C4C1643129D003E3AE8 /* Recommends.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recommends.h; sourceTree = "<group>"; };
+		B2912C4D1643129D003E3AE8 /* Recommends.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recommends.m; sourceTree = "<group>"; };
+		B2912C4E1643129D003E3AE8 /* Reminder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reminder.h; sourceTree = "<group>"; };
+		B2912C4F1643129D003E3AE8 /* Reminder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reminder.m; sourceTree = "<group>"; };
+		B2912C501643129D003E3AE8 /* Faculty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Faculty.h; sourceTree = "<group>"; };
+		B2912C511643129D003E3AE8 /* Faculty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Faculty.m; sourceTree = "<group>"; };
+		B2912C521643129D003E3AE8 /* News.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = News.h; sourceTree = "<group>"; };
+		B2912C531643129D003E3AE8 /* News.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = News.m; sourceTree = "<group>"; };
+		B2912C541643129D003E3AE8 /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
 		B2EC5ACB163B5B820092EE0C /* HSE+.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HSE+.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2EC5ACF163B5B820092EE0C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B2EC5AD1163B5B820092EE0C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -74,8 +76,6 @@
 		B2EC5AFD163B5B820092EE0C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B2EC5AFF163B5B820092EE0C /* HSE_Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HSE_Tests.h; sourceTree = "<group>"; };
 		B2EC5B00163B5B820092EE0C /* HSE_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HSE_Tests.m; sourceTree = "<group>"; };
-		B2EC5B10163B5C0A0092EE0C /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Student.h; path = ../Student.h; sourceTree = "<group>"; };
-		B2EC5B11163B5C0A0092EE0C /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Student.m; path = ../Student.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,18 +135,18 @@
 		B2EC5AD5163B5B820092EE0C /* HSE+ */ = {
 			isa = PBXGroup;
 			children = (
-				B22D6847163D4E9F003A828C /* Entrant.h */,
-				B22D6848163D4E9F003A828C /* Entrant.m */,
-				B2EC5B10163B5C0A0092EE0C /* Student.h */,
-				B2A9144C1640330C001A99C5 /* Recommends.h */,
-				B2A9144D1640330C001A99C5 /* Recommends.m */,
-				B2A9144E1640330C001A99C5 /* Reminder.h */,
-				B2A9144F1640330C001A99C5 /* Reminder.m */,
-				B2C102D21640312300DEF9A2 /* Faculty.h */,
-				B2C102D31640312300DEF9A2 /* Faculty.m */,
-				B2C102D6164031C200DEF9A2 /* News.h */,
-				B2C102D7164031C200DEF9A2 /* News.m */,
-				B2EC5B11163B5C0A0092EE0C /* Student.m */,
+				B2912C491643129D003E3AE8 /* Student.h */,
+				B2912C4A1643129D003E3AE8 /* Entrant.h */,
+				B2912C4B1643129D003E3AE8 /* Entrant.m */,
+				B2912C4C1643129D003E3AE8 /* Recommends.h */,
+				B2912C4D1643129D003E3AE8 /* Recommends.m */,
+				B2912C4E1643129D003E3AE8 /* Reminder.h */,
+				B2912C4F1643129D003E3AE8 /* Reminder.m */,
+				B2912C501643129D003E3AE8 /* Faculty.h */,
+				B2912C511643129D003E3AE8 /* Faculty.m */,
+				B2912C521643129D003E3AE8 /* News.h */,
+				B2912C531643129D003E3AE8 /* News.m */,
+				B2912C541643129D003E3AE8 /* Student.m */,
 				B2EC5ADE163B5B820092EE0C /* AppDelegate.h */,
 				B2EC5ADF163B5B820092EE0C /* AppDelegate.m */,
 				B2EC5AE7163B5B820092EE0C /* MainStoryboard.storyboard */,
@@ -302,13 +302,13 @@
 			files = (
 				B2EC5ADC163B5B820092EE0C /* main.m in Sources */,
 				B2EC5AE0163B5B820092EE0C /* AppDelegate.m in Sources */,
-				B2EC5B12163B5C0A0092EE0C /* Student.m in Sources */,
-				B22D6849163D4E9F003A828C /* Entrant.m in Sources */,
-				B2C102D41640312300DEF9A2 /* Faculty.m in Sources */,
-				B2C102D8164031C200DEF9A2 /* News.m in Sources */,
-				B2A914501640330C001A99C5 /* Recommends.m in Sources */,
-				B2A914511640330C001A99C5 /* Reminder.m in Sources */,
 				B289935E1642DA6E00AC4549 /* FirstViewController.m in Sources */,
+				B2912C551643129D003E3AE8 /* Entrant.m in Sources */,
+				B2912C561643129D003E3AE8 /* Recommends.m in Sources */,
+				B2912C571643129D003E3AE8 /* Reminder.m in Sources */,
+				B2912C581643129D003E3AE8 /* Faculty.m in Sources */,
+				B2912C591643129D003E3AE8 /* News.m in Sources */,
+				B2912C5A1643129D003E3AE8 /* Student.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
