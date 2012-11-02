@@ -13,23 +13,23 @@
     NSString *type;        // Тип новости;
     NSDate *date;          // Дата публикации новости;
     NSString *body;        // Сам текст новости;
-    BOOL *isPublished;     // Вывешена ли новость в ленту;
-    BOOL *Subscribed;      // Подписан ли на новости;
+    BOOL isPublished;     // Вывешена ли новость в ленту;
+    BOOL Subscribed;      // Подписан ли на новости;
 }
 
 -(NSDate *)date;
 -(NSString *)type;
 -(NSString *)author;
 -(NSString *)body;
--(BOOL *)isPublished;
--(BOOL *)Subscribed;
+-(BOOL)isPublished;
+-(BOOL)Subscribed;
 
 -(void)setDate:(NSDate *)_date;
 -(void)setType:(NSString *)_type;
 -(void)setAuthor:(NSString *)_author;
 -(void)setBody:(NSString *)_body;
--(void)setPublisher:(BOOL *)_isPublished;
--(void)setSubscriber:(BOOL *)_Subscribed;
+-(void)setPublisher:(BOOL)_isPublished;
+-(void)setSubscriber:(BOOL)_Subscribed;
 
 
 @end

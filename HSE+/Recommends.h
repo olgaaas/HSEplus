@@ -14,7 +14,7 @@
     NSString *fio;              //Фамилия, имя, отчество
     NSString *contact;          //контакт, возможно опционально
     NSString *body;             //тело рекомендации
-    BOOL *noflood;              //проверка на флуд модератором
+    BOOL noflood;              //проверка на флуд модератором
 }
 
 -(NSString *)faculty;
@@ -22,13 +22,13 @@
 -(NSString *)fio;
 -(NSString *)contact;
 -(NSString *)body;
--(BOOL *)noflood;
+-(BOOL)noflood;
 
 -(void)setFaculty:(NSString *)_faculty;
 -(void)setKurs:(NSString *)_kurs;
 -(void)setFio:(NSString *)_fio;
 -(void)setContact:(NSString *)_contact;
 -(void)setBody:(NSString *)_body;
--(void)setFlood:(BOOL *)_noflood;
+-(void)setFlood:(BOOL)_noflood;
 
 @end

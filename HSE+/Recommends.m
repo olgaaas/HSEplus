@@ -17,7 +17,7 @@
 -(NSString *)fio { return fio; }
 -(NSString *)contact { return contact; }
 -(NSString *)body { return body; }
--(BOOL *)noflood { return noflood; }
+-(BOOL)noflood { return noflood; }
 
 
 -(void)setFaculty:(NSString *)_faculty { faculty = _faculty; }
@@ -25,7 +25,7 @@
 -(void)setFio:(NSString *)_fio { fio = _fio; }
 -(void)setContact:(NSString *)_contact { contact = _contact; }
 -(void)setBody:(NSString *)_body { body = _body; }
--(void)setFlood:(BOOL *)_noflood { noflood = _noflood; }
+-(void)setFlood:(BOOL)_noflood { noflood = _noflood; }
 
 
 

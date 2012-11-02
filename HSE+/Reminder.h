@@ -15,7 +15,7 @@
     NSString *TimeEvent;        // время ремайндера ;
     NSString *Contain;          // содержание ремайндера ;
     NSString *newsWms;          // переменная для новость/сообщение от старосты ;
-    BOOL *SendWarden;           // если сообщение от старосты, отправлять на почту.
+    BOOL SendWarden;           // если сообщение от старосты, отправлять на почту.
 }
 
 -(NSString *)DateRemind;
@@ -24,7 +24,7 @@
 -(NSString *)TimeEvent;
 -(NSString *)Contain;
 -(NSString *)newsWms;
--(BOOL *)SendWarden;
+-(BOOL)SendWarden;
 
 -(void)setDateRemind:(NSString *)_DateRemind;
 -(void)setTimeRemind:(NSString *)_TimeRemind;
@@ -32,6 +32,6 @@
 -(void)setTimeEvent:(NSString *)_TimeEvent;
 -(void)setContain:(NSString *)_Contain;
 -(void)setWms:(NSString *)_newsWms;
--(void)setSendWarden:(BOOL *)_SendWarden;
+-(void)setSendWarden:(BOOL)_SendWarden;
     
 @end

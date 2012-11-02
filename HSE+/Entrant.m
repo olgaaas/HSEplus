@@ -12,15 +12,15 @@
 
 // Описание методов для получения значений полей объекта класса Entrant;
 -(NSMutableArray *)subscribedTo { return subscribedTo; }
--(BOOL *)hasSubscriptions { return hasSubscriptions; }
--(BOOL *)newUnpublishedNews { return newUnpublishedNews; }
--(BOOL *)reminderNeeded { return reminderNeeded; }
+-(BOOL)hasSubscriptions { return hasSubscriptions; }
+-(BOOL)newUnpublishedNews { return newUnpublishedNews; }
+-(BOOL)reminderNeeded { return reminderNeeded; }
 
 
 // Описание методов для изменения значений полей объекта класса Entrant;
--(void)setSubscriptions:(BOOL *)_hasSubscriptions { hasSubscriptions = _hasSubscriptions; }
--(void)setUnpublishedNews:(BOOL *)_newUnpublishedNews { newUnpublishedNews = _newUnpublishedNews; }
--(void)needReminder:(BOOL *)_reminderNeeded { reminderNeeded = _reminderNeeded; }
+-(void)setSubscriptions:(BOOL)_hasSubscriptions { hasSubscriptions = _hasSubscriptions; }
+-(void)setUnpublishedNews:(BOOL)_newUnpublishedNews { newUnpublishedNews = _newUnpublishedNews; }
+-(void)needReminder:(BOOL)_reminderNeeded { reminderNeeded = _reminderNeeded; }
 -(void)setListOfSubscriptions:(NSMutableArray *)_subscribedTo {
     if (!hasSubscriptions) NSLog(@"Подписок нет. Создать подписку.");
     else NSLog(@"Уже есть подписки. Надо либо добавить, либо удалить.");
